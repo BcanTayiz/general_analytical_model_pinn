@@ -48,7 +48,7 @@ If you use this framework or code in your research, please cite our paper draft:
 ```bibtex
 @article{analytical_embedded_pinns2026,
   title={A Generalized Structure-Preserving Analytical Embedded Framework for Nonlinear Dynamical Systems},
-  author={Independent Researcher},
+  author={Barış Can Tayiz},
   year={2026}
 }
 ```
