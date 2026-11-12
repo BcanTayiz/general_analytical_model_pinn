@@ -33,8 +33,10 @@ pip install torch numpy scipy matplotlib
 
 ## 📂 Repository Structure
 
-* `paper.tex`: IEEE-format LaTeX source code for the research paper.
-* `README.md`: Documentation and instructions.
+
+There is code and pdf in method folder;
+You may find different attempts in this folder;
+In method folder, there are final code and pdf article.
 
 ---
 
