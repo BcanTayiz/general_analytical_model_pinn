@@ -34,9 +34,10 @@ pip install torch numpy scipy matplotlib
 ## 📂 Repository Structure
 
 
-There is code and pdf in method folder \
-You may find different attempts in this folder \
-In method folder, there are final code and pdf article.
+There is final code and final article pdf in **method** folder \
+You may find different attempts  in **tutorial** folder where I created tests or different methods\
+
+
 
 ---
 
