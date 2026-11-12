@@ -1,0 +1,22 @@
+repo_str.py
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bcf
+*.run.xml
+*.tex
+*.bib
+
+# Python / IDE / OS specific files
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.DS_Store
