@@ -1,38 +1,51 @@
-# Taylor-Embedded Symbolic Physics-Informed Neural Networks (TES-PINNs)
+# Generalized Structure-Preserving Analytical Embedded PINNs
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%252B-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&to=PyTorch&logo=PyTorch&logoColor=white)](https://pytorch.org/)
-
-Official repository for the research paper: **"Taylor-Embedded Symbolic Physics-Informed Neural Networks (TES-PINNs): Drift-Free Discovery of Interpretable Dynamical Systems"**.
+This repository provides a generalized framework for modeling nonlinear dynamical systems by embedding known analytical equations directly into neural network architectures while treating physical coefficients as learnable parameters. This approach bridges purely data-driven black-box models with mechanistic physics, eliminating long-term rollout drift and achieving robust extrapolation and inverse parameter discovery.
 
 ---
 
-## Overview
+## 🚀 Key Features
 
-Physics-Informed Neural Networks (PINNs) provide a powerful framework for modeling physical systems, but traditional architectures suffer from:
-1. **Spectral bias** (difficulty in capturing high-frequency dynamics).
-2. **Cumulative rollout drift** over long temporal horizons.
-3. **Black-box opacity** lacking scientific interpretability.
-
-**TES-PINNs** resolve these bottlenecks by integrating:
-- **Randomized Fourier Feature Mappings** to overcome spectral bias.
-- **Recursive Higher-Order Taylor Integration** to stabilize long-term trajectories and eliminate drift.
-- **Direct Symbolic Translation & SINDy Filtering** to extract parsimonious, closed-form ordinary differential equations (ODEs) via SymPy.
+* **Structure-Preserving Embedding**: Constrains the hypothesis space to valid physical templates rather than unconstrained function approximation.
+* **Inverse Parameter Identification**: Optimizes physical coefficients (e.g., damping, stiffness, limit-cycle parameters) directly via gradient descent.
+* **Multi-System Support**: Easily extensible across various nonlinear systems including the **Duffing Oscillator** and the **Van der Pol Limit-Cycle Oscillator**.
+* **Rigorous Evaluation**: Implements chronological train/test splitting to validate long-term future-state extrapolation capability.
 
 ---
 
-## Repository Structure
+## 📊 Benchmark Results
 
-```text
-├── LICENSE.txt
-├── README.md
-├── method/
-│   ├── code.ipynb
-│   ├── article/
-│   │   ├── article.pdf
-├── tutorial/
-│   ├── intro.ipynb
-│   ├── polynomial-augmented neural networks.ipynb
-│   ├── taylor_exp.ipynb
+| System | Training $R^2$ | Test Extrapolation $R^2$ | True Parameters | Learned Parameters |
+| :--- | :---: | :---: | :--- | :--- |
+| **Duffing Oscillator** | $0.9959$ | $0.9671$ | $\delta=0.2, \alpha=-1.0, \beta=1.0$ | $\delta=0.2175, \alpha=-1.0000, \beta=0.9993$ |
+| **Van der Pol Oscillator** | $0.9912$ | $0.8377$ | $\mu=1.5000$ | $\mu=1.4975$ |
+---
+
+## 🛠️ Installation & Requirements
+
+Ensure you have Python 3.8+ and PyTorch installed along with standard scientific libraries:
+
+```bash
+pip install torch numpy scipy matplotlib
+```
+
+---
+
+## 📂 Repository Structure
+
+* `paper.tex`: IEEE-format LaTeX source code for the research paper.
+* `README.md`: Documentation and instructions.
+
+---
+
+## 📄 Citation
+
+If you use this framework or code in your research, please cite our paper draft:
+
+```bibtex
+@article{analytical_embedded_pinns2026,
+  title={A Generalized Structure-Preserving Analytical Embedded Framework for Nonlinear Dynamical Systems},
+  author={Independent Researcher},
+  year={2026}
+}
 ```
