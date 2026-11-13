@@ -46,9 +46,13 @@ You may find different attempts  in **tutorial** folder where I created tests or
 If you use this framework or code in your research, please cite our paper draft:
 
 ```bibtex
-@article{analytical_embedded_pinns2026,
+@software{analytical_embedded_pinns2026,
   title={A Generalized Structure-Preserving Analytical Embedded Framework for Nonlinear Dynamical Systems},
-  author={Barış Can Tayiz},
-  year={2026}
+  author={Independent Researcher},
+  year={2026},
+  publisher={Zenodo},
+  doi={10.5281/zenodo.24182618},
+  url={https://doi.org/10.5281/zenodo.24182618}
 }
+
 ```
